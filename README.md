@@ -20,4 +20,4 @@ These are all demonstrated in [Demo of Features.ipynb](https://github.com/JuliaP
 numpy
 gzip
 ```
-Do note to use the Cryptominisat Python wrapper you are required to first built Cryptominisat with GAUSS. For speed it should also be built with M4RI.
+Do note to use the Cryptominisat Python wrapper you are required to first build Cryptominisat with GAUSS. For speed it should also be built with M4RI.
