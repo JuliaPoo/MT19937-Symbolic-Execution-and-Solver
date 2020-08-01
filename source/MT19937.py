@@ -148,8 +148,8 @@ class MT19937():
         # Load matrices
         # solve_mat is the matrix used to solve the equations
         # verify_mat is to check if data is indeed the first nbits bits of consecutive output of an MT19937
-        inv_filename = "matrices/inverse_nb-{}_iterr-{}_ndata-{}.npy.gz".format(nb, iterr, ndata)
-        ver_filename = "matrices/verify_nb-{}_iterr-{}_ndata-{}.npy.gz".format(nb, iterr, ndata)
+        inv_filename = os.path.dirname(__file__) + "/../matrices/inverse_nb-{}_iterr-{}_ndata-{}.npy.gz".format(nb, iterr, ndata)
+        ver_filename = os.path.dirname(__file__) + "/../matrices/verify_nb-{}_iterr-{}_ndata-{}.npy.gz".format(nb, iterr, ndata)
         f = gzip.GzipFile(inv_filename, "r")
         solve_mat = np.load(f, allow_pickle=True)
         f = gzip.GzipFile(ver_filename, "r")
@@ -207,7 +207,7 @@ class MT19937():
         #original_state = state.copy()
         
         if type(self.untwist_mat) == type(None):
-            filename = "matrices/untwist.npy.gz"
+            filename = os.path.dirname(__file__) + "/../matrices/untwist.npy.gz"
             f = gzip.GzipFile(filename, "r")
             self.untwist_mat = np.load(f, allow_pickle=True)
             
