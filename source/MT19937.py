@@ -11,6 +11,7 @@ import random
 import copy
 import numpy as np
 import gzip
+import os
 
 class MT19937():
 
